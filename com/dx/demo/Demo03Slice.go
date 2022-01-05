@@ -26,7 +26,7 @@ func main() {
 
 	arrray4 := arrray2[:5]
 
-	fmt.Println("array4:", arrray4, "长度：", len(arrray4),"容量是：",cap(arrray4))
+	fmt.Println("array4:", arrray4, "长度：", len(arrray4), "容量是：", cap(arrray4))
 
 	arrray41 := arrray2[1:]
 
@@ -34,6 +34,6 @@ func main() {
 
 	arrray5 := arrray2[:]
 
-	fmt.Println("array5:", arrray5, "长度：", len(arrray5),"容量是：",cap(arrray5))
+	fmt.Println("array5:", arrray5, "长度：", len(arrray5), "容量是：", cap(arrray5))
 
 }
