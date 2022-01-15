@@ -10,15 +10,15 @@ import (
 func main() {
 	fmt.Println(getCurrentDirectory())
 
-	fileObj, err := os.OpenFile("./test.txt", os.O_CREATE| os.O_WRONLY | os.O_RDONLY, 0644)
-	if err !=nil {
+	fileObj, err := os.OpenFile("./test.txt", os.O_CREATE|os.O_WRONLY|os.O_RDONLY|os.O_APPEND, 0644)
+	if err != nil {
 		fmt.Println("出错误了！")
 		return
 	}
 
 	fileObj.WriteString("hello 这是我用程序加的字符串！")
 
-	fmt.Println("fileObje",fileObj)
+	fmt.Println("fileObje", fileObj)
 
 	fileObj.Close()
 
