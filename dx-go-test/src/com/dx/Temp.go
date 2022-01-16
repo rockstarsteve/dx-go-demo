@@ -7,11 +7,22 @@ import (
 
 func main() {
 
-	var a int32 = 2
-	fmt.Println("a", a)
-	fmt.Println("a", reflect.TypeOf(a))
-	var b = 3
-	fmt.Println("b:", b)
-	fmt.Println("a", reflect.TypeOf(b))
+	//类型断言
+
+	var a interface{}
+
+	a = 100
+
+	fmt.Println("a:", a)
+
+	fmt.Println(reflect.TypeOf(a))
+	v, ok := a.(int)
+	fmt.Println("T a:", v, ok)
+	switch tt := a.(type) {
+	case string:
+		fmt.Println("tt", tt)
+	case int:
+		fmt.Println("tt", tt)
+	}
 
 }
