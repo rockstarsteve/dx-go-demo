@@ -2,27 +2,32 @@ package main
 
 import (
 	"fmt"
-	"reflect"
 )
 
 func main() {
+	fmt.Println("结果是：", 1/10)
+	fmt.Println("结果是：", 1%10)
 
-	//类型断言
+	var a int = 12
+	var sum int = 0
 
-	var a interface{}
+	for {
+		if a > 0 {
+			sum = sum + (a % 10)
+			a = a / 10
 
-	a = 100
-
-	fmt.Println("a:", a)
-
-	fmt.Println(reflect.TypeOf(a))
-	v, ok := a.(int)
-	fmt.Println("T a:", v, ok)
-	switch tt := a.(type) {
-	case string:
-		fmt.Println("tt", tt)
-	case int:
-		fmt.Println("tt", tt)
+		} else {
+			fmt.Println("a:", a)
+			fmt.Println("sum:", sum)
+			break
+		}
 	}
+
+	//for {
+	//	time.Sleep(time.Second)
+	//	rand.Seed(time.Now().UnixMilli())
+	//	r := rand.Int63()
+	//	fmt.Println("rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr:", r)
+	//}
 
 }
